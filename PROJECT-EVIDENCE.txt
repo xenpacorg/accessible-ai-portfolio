@@ -1,0 +1,79 @@
+ALDEN LEMBERG — PROJECT EVIDENCE NOTES
+Portfolio display label: Ablr Accessibility Platform. The existing repository
+uses a legacy internal name; the portfolio label is descriptive, not an official
+Ablr product announcement.
+Prepared November 8, 2026. Sanitized implementation inventory, not a production audit.
+
+1. ACCESSIBLE / A11YFORGE
+Reviewed README.md; apps/worker/package.json; apps/web/package.json;
+apps/worker/src/integrations/gemini.ts; apps/web/src/lib/gemini-review.ts;
+apps/worker/src/persist.ts; scanner references; apps/worker/test/prDiff.test.ts.
+
+Gemini integration sends a structured schema and requests JSON. The review schema
+contains manual-check and confidence fields. Scanner code references axe-core,
+HTML_CodeSniffer, Lighthouse and veraPDF. Persistence logic explicitly avoids
+redundant Lighthouse/axe findings. The README describes Docker application builds,
+source-review fallback, and a human auditor/emulation route. Replacement tests
+cover skipping stale suggestions. Availability of infrastructure was not validated.
+
+User-confirmed contribution: built the Ablr tool, including Docker AI analysis and
+code review/analysis tools. User-reported outcome: positive feedback and a personal
+meeting with Ablr executives regarding development of an additional product.
+Specific feedback and resulting changes still need to be supplied.
+
+2. NOTEPRO
+Reviewed README.md; package.json; src/lib/gemini.ts; server/api.ts references;
+tests/gemini.integration.ts; tests/pdf.integration.ts.
+The current solve prompt requests transcription before reasoning. The application
+returns a visible 'Read as' transcription. EmbedPDF, BlockNote, Yjs and associated
+libraries appear in the package manifest. The README describes their integration.
+The Gemini API test uses a mocked upstream and database query; it does not contact
+a live AI model. It tests missing keys, model configuration, upstream 404 and 429.
+The portfolio's early prompt is an illustrative reconstruction, not a historical
+artifact. Individual-project status requires confirmation.
+
+3. TFRC / TRUEFANS CONNECT
+Reviewed README.md; package.json; lib/artist-agent/run-loop.ts.
+The artist assistant is instructed to read actual platform data before drafting,
+propose campaigns subject to approval, and avoid claiming a message was sent.
+This is code evidence, not a runtime verification of all permission checks.
+No fan/customer records or confidential operational data are included.
+
+SCOPE
+Three saved project repositories were identified and reviewed selectively for
+portfolio-relevant evidence. This is not an exhaustive audit of every file or
+all projects ever built. Local implementation claims are distinguished from
+research claims and user-reported experience. No credentials are included.
+
+4. SCULPTOR AI — USER-SUPPLIED EXPERIENCE
+Contributor, part-time, June–July 2025, Seattle / remote.
+User reports engineering and deploying a custom Judge0-based serverless execution
+engine for AI agents to run and evaluate student code in educational settings.
+The official Judge0 repository was consulted for the open-source tool attribution.
+Sculptor implementation and deployment records were not inspected.
+
+5. VETRAI — USER-SUPPLIED EXPERIENCE
+June–November 2025, associated with XenPac. User reports engineering an autonomous
+research pipeline with hallucination mitigation and the fastest deep-research cycle
+at launch in contemporaneous head-to-head comparisons. No benchmark dataset,
+methodology, competitors, or measurements were supplied. Preserve this as a
+reported historical benchmark, not an independently verified or current ranking.
+A collaborator name was omitted pending sharing permission. These experiences
+are background, not established semester learning activities.
+
+6. ACCESSIBILITY CODE-REVIEW ENGINE — ADDITIONAL CODE REVIEW
+Read apps/worker/src/integrations/prReview.ts, scanners/codeReview.ts references,
+and integrations/jira.ts re-verification logic. The PR engine maps scan findings
+to numbered changed files, validates confidence and diff ranges, and posts inline
+suggestions. Requested fix PRs skip stale replacements. Human audit requests and
+Jira re-verification complete parts of the workflow. CodeRabbit is an analogy,
+not a claimed dependency, affiliation, or integration. Context and review bounds
+mean this is not exhaustive coverage or an accessibility certification.
+
+7. ADDITIONAL MODEL EXPERIENCE — USER CONFIRMED
+Kimi K2 and Claude: used toward more efficient outputs for specific tasks.
+Specialized agents: used for specific jobs.
+Custom browser models: small language models with fewer parameters for specific
+tasks. Do not assume quantization, fine-tuning, training from scratch, a particular
+runtime, offline operation, benchmark scores, or model sizes. Examples and
+course timing remain to be documented.
